@@ -45,14 +45,14 @@ with open(budget_csv, newline="") as csvfile:
 	print("Greatest Increase in Revenue: " + increasemonth + " ($" + str(greatincrease) + ")")
 	print("Greatest Decrease in Revenue: " + decreasemonth + " ($" + str(greatdecrease) + ")")
 
-output_file = os.path.join("output_file_1.csv")
+output_file = os.path.join("output_file_1.txt")
 
 with open(output_file, "w", newline="") as datafile:
 	writer = csv.writer(datafile)
 	writer.writerow(["Financial Analysis"])
 	writer.writerow(["----------------------------"])
-	writer.writerow(["Total Months:", totalmonths])
-	writer.writerow(["Total Revenue:", "$" + str(totalrevenue)])
-	writer.writerow(["Average Revenue Change:", "$" + str(math.floor(averagerevchange))])
-	writer.writerow(["Greatest Increase in Revenue:", increasemonth, "$" + str(greatincrease)])
-	writer.writerow(["Greatest Decrease in Revenue:", decreasemonth, "$" + str(greatdecrease)])
+	writer.writerow(["Total Months: " + str(totalmonths)])
+	writer.writerow(["Total Revenue: $" + str(totalrevenue)])
+	writer.writerow(["Average Revenue Change: $" + str(math.floor(averagerevchange))])
+	writer.writerow(["Greatest Increase in Revenue: " + increasemonth + " ($" + str(greatincrease) + ")"])
+	writer.writerow(["Greatest Decrease in Revenue: " + decreasemonth + " ($" + str(greatdecrease) + ")"])
