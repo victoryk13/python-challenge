@@ -1,4 +1,3 @@
-
 import os, csv, math
 
 totalmonths = 0
@@ -11,9 +10,6 @@ greatdecrease = 0
 previous = ['Date','Revenue']
 
 budget_csv = os.path.join("Resources", "budget_data_1.csv")
-
-
-
 
 with open(budget_csv, newline="") as csvfile:
 
