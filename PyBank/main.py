@@ -15,7 +15,6 @@ with open(budget_csv, newline="") as csvfile:
 
 	csvreader = csv.reader(csvfile, delimiter=",")
 
-
 	for row in csvreader:
 		if row[0] != 'Date':
 			totalmonths = totalmonths + 1
