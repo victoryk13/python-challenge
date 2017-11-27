@@ -59,13 +59,13 @@ new_header_list = ["Emp ID", "First Name", "Last Name", "DOB", "SSN",
 
 
 
-output_file = os.path.join("output_file_2.csv")
+output_file = os.path.join("output_file_1.csv")
 
 with open(output_file, "w", newline="") as datafile:
 	writer = csv.writer(datafile)
 	writer.writerow(new_header_list)
 
-employee_csv = os.path.join("Resources", "employee_data2.csv")
+employee_csv = os.path.join("Resources", "employee_data1.csv")
 
 
 
