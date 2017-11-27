@@ -57,8 +57,6 @@ us_state_abbrev = {
 new_header_list = ["Emp ID", "First Name", "Last Name", "DOB", "SSN", 
 "State"]
 
-
-
 output_file = os.path.join("output_file_1.csv")
 
 with open(output_file, "w", newline="") as datafile:
@@ -66,10 +64,6 @@ with open(output_file, "w", newline="") as datafile:
 	writer.writerow(new_header_list)
 
 employee_csv = os.path.join("Resources", "employee_data1.csv")
-
-
-
-
 
 with open(employee_csv, newline="") as csvfile:
 
