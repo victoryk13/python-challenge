@@ -1,4 +1,3 @@
-
 import os, csv
 
 us_state_abbrev = {
@@ -76,7 +75,6 @@ with open(employee_csv, newline="") as csvfile:
 			birth_date = row[2][5:7] + "/" + row[2][8:10] + "/" + row[2][0:4]
 			ssn = "***-**-" + row[3][7:11]
 			for key, value in us_state_abbrev.items():
-
 				if row[4] == key:
 					state = value
 			row[1] = first_name
