@@ -1,4 +1,3 @@
-
 import os, csv, math
 
 totalmonths = 0
@@ -11,13 +10,9 @@ previous = ['Date','Revenue']
 
 budget_csv = os.path.join("Resources", "budget_data_1.csv")
 
-
-
-
 with open(budget_csv, newline="") as csvfile:
 
 	csvreader = csv.reader(csvfile, delimiter=",")
-
 
 	for row in csvreader:
 		if previous[0] == 'Date' and row[0] != 'Date':
