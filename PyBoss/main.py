@@ -68,7 +68,6 @@ with open(output_file, "w", newline="") as datafile:
 employee_csv = os.path.join("Resources", "employee_data1.csv")
 
 
-
 
 
 with open(employee_csv, newline="") as csvfile:

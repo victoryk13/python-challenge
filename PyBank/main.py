@@ -5,7 +5,6 @@ totalmonths = 0
 totalrevenue = 0
 revchange = 0
 priorrevchange = 0
-totalrevchange = 0
 greatincrease = 0
 greatdecrease = 0
 previous = ['Date','Revenue']
@@ -21,6 +20,8 @@ with open(budget_csv, newline="") as csvfile:
 
 
 	for row in csvreader:
+		if previous[0] == 'Date' and row[0] != 'Date':
+			totalrevchange = int(row[1]) 
 		if row[0] != 'Date':
 			totalmonths = totalmonths + 1
 			totalrevenue = totalrevenue + int(row[1])
@@ -35,7 +36,7 @@ with open(budget_csv, newline="") as csvfile:
 			totalrevchange = totalrevchange + revchange
 			priorrevchange = revchange
 		previous = row
-	averagerevchange = totalrevchange / (totalmonths - 1)
+	averagerevchange = totalrevchange / totalmonths
 	print("\n")
 	print("Financial Analysis")
 	print("----------------------------")
