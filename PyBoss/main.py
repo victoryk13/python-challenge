@@ -1,4 +1,3 @@
-
 import os, csv
 
 us_state_abbrev = {
@@ -57,8 +56,6 @@ us_state_abbrev = {
 new_header_list = ["Emp ID", "First Name", "Last Name", "DOB", "SSN", 
 "State"]
 
-
-
 output_file = os.path.join("output_file_1.csv")
 
 with open(output_file, "w", newline="") as datafile:
@@ -67,10 +64,13 @@ with open(output_file, "w", newline="") as datafile:
 
 employee_csv = os.path.join("Resources", "employee_data1.csv")
 
-
+<<<<<<< HEAD
 
 
 with open(employee_csv, newline="") as csvfile:
+=======
+with open(employee_csv, newline="") as csvfile:
+>>>>>>> 0f3f9b1ea98fa25c175eeec3ca809014c78fe250
 
 	csvreader = csv.reader(csvfile, delimiter=",")
 
@@ -81,7 +81,6 @@ with open(employee_csv, newline="") as csvfile:
 			birth_date = row[2][5:7] + "/" + row[2][8:10] + "/" + row[2][0:4]
 			ssn = "***-**-" + row[3][7:11]
 			for key, value in us_state_abbrev.items():
-
 				if row[4] == key:
 					state = value
 			row[1] = first_name
